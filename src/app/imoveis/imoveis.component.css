@@ -1,0 +1,15 @@
+p {
+   font-size: 18px;
+  } 
+
+	
+  
+    /* h4  {
+      padding: 10px;
+      background-color:#f00f0f;
+      color:white;
+      } */
+
+  .containerFlex {
+   display: flex; /* or inline-flex */
+ }

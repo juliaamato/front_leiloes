@@ -1,0 +1,78 @@
+
+<!-- <div class="containerFlex">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul> -->
+    <div class="row">
+        <div class="col-xs-12">
+            <div>
+                <h1 style="align-self: baseline; font-size: 28px;">Imoveis Disponíveis</h1>
+            </div>
+              
+              <a href="{{imovel.link}}" class="list-group-item clearfix"  *ngFor="let imovel of imoveis">
+                <div class="containerFlex">
+                  <div>
+                    <span class="pull-left">
+                      <img src="{{imovel.imagemSrc}}" alt="{{imovel.titulo}}" style="max-height: 200px;">
+                      <h4 style="padding: 5px; background-color: #C9210A; color: white;" *ngIf="imovel.statusOcupacao" ><span>Imovél ocupado</span></h4>
+                      
+                  </span>
+                  </div>    
+                    <div class="col-xs-12">
+                        <h3 *ngIf="imovel.titulo != null" class="list-group-item-heading">{{imovel.titulo}}</h3>
+                        <p *ngIf="imovel.descricao != null"  class="list-group-item">{{imovel.descricao}}</p>
+                        <p *ngIf="imovel.endereco != null" class="list-group-item-text"> {{imovel.endereco}}</p>
+                        <p *ngIf="imovel.tipoImovel != null" class="list-group-item-text"> {{imovel.tipoImovel}}</p>
+                        <p *ngIf="imovel.area != null" class="list-group-item-text"> {{imovel.area}}m²</p>
+                    </div>
+                    <div>
+                      <p *ngIf="imovel.precoInicial != null" class="list-group-item-text" > Avaliado em: R${{imovel.precoInicial}}</p>
+                      <p *ngIf="imovel.desconto != null" class="list-group-item-text" style=" padding: 5px 0px" > Desconto: {{imovel.desconto}}%</p>
+                      <h2 *ngIf="imovel.precoFinal != null" class="list-group-item-text"> Lance inicial: R${{imovel.precoFinal}}</h2>
+                      <h4 style="padding: 5px; background-color: #306247; color: white;" *ngIf="imovel.statusFgts" ><span>Aceita FGTS</span></h4>
+                      <h4 style="padding: 5px; background-color: #3836B4; color: white;" *ngIf="imovel.statusFinanciamento" ><span>Aceita Financiamento</span></h4>
+                    </div>   
+                </div>
+                <div>
+                  <button type="button" class="btn btn-primary btn-lg btn-block">Ver imovél</button> 
+                </div>
+                
+                
+            </a> 
+            </div>
+             
+          </div> 
+<!-- </div> -->
+
+
+
+   
+
+<!-- <div class="row">
+    <div class="col-xs-12">
+        <a href="#" class="list-group-item clearfix"  *ngFor="let imovel of imoveis">
+            <div class="card" style="width: 18rem;">
+                <span class="pull-center">
+                    <img class="card-img-top" src="{{imovel.imagemSrc}}" alt="Card image cap" style="max-height: 100px;">
+                </span>
+               
+                <div class="card-body">
+                  <h5 class="card-title">{{imovel.titulo}}</h5>
+                  <p class="card-text"> {{imovel.descricao}}</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </a>
+</div>
+</div> -->
